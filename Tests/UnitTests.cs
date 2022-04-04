@@ -81,7 +81,7 @@ namespace GithubActionsLab
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
-            Assert.AreEqual(27, Program.Multiply("5", "7")); //testing this one
+            Assert.AreEqual(35, Program.Multiply("5", "7")); //testing this one
         }
         
         [Test]
