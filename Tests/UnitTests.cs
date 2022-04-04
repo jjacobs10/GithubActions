@@ -150,9 +150,9 @@ namespace GithubActionsLab
         [Test]
         public void Power_Valid_JACOBS()
         {
-            Assert.AreEqual(25, Program.Divide("5", "2"));
-            Assert.AreEqual(36, Program.Divide("6", "2"));
-            Assert.AreEqual(10000, Program.Divide("100", "2"));
+            Assert.AreEqual(25, Program.Power("5", "2"));
+            Assert.AreEqual(36, Program.Power("6", "2"));
+            Assert.AreEqual(10000, Program.Power("100", "2"));
         }
         
         [Test]
