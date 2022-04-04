@@ -133,6 +133,43 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                
+     //Power
+        
+        
+        
+        [Test]
+        public void Power_Valid_JACOBS()
+        {
+            Assert.AreEqual(25, Program.Divide("5", "2"));
+            Assert.AreEqual(36, Program.Divide("6", "2"));
+            Assert.AreEqual(10000, Program.Divide("100", "2"));
+        }
+        
+        [Test]
+        public void Power_Invalid_JACOBS()
+        {
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
+        
+        [Test]
+        public void Power_Null_JACOBS()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
 
     }
 }
