@@ -66,6 +66,39 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
+        
+        
+        
+        
+        
+        
+     //Multiply
+        
+        
+        
+        [Test]
+        public void Multiply_Valid_JACOBS()
+        {
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(27, Program.Multiply("5", "7")); //testing this one
+        }
+        
+        [Test]
+        public void Multiply_Invalid_JACOBS()
+        {
+            Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
+        }
+        
+        [Test]
+        public void Multiply_Null_JACOBS()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
+        }
 
     }
 }
