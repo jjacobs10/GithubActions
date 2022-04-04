@@ -7,6 +7,8 @@ namespace GithubActionsLab
     public class Math
     {
     //Add
+        
+        
         [Test]
         public void Add_Valid_JACOBS()
         {
@@ -31,7 +33,16 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
         
+        
+        
+        
+        
+        
+        
     //Subtract
+        
+        
+        
         [Test]
         public void Subtract_Valid_JACOBS()
         {
@@ -40,7 +51,7 @@ namespace GithubActionsLab
             Assert.AreEqual(-2, Program.Subtract("5", "7"));
         }
         
-          [Test]
+        [Test]
         public void Subtract_Invalid_JACOBS()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
@@ -48,15 +59,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
         }
         
-         [Test]
-        public void Subtract_Valid_JACOBS()
-        {
-            Assert.AreEqual(-1, Program.Subtract("1", "2"));
-            Assert.AreEqual(1, Program.Subtract("3", "2"));
-            Assert.AreEqual(-2, Program.Subtract("5", "7"));
-        }
-        
-         [Test]
+        [Test]
         public void Subtract_Null_JACOBS()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
