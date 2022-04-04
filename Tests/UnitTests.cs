@@ -81,7 +81,7 @@ namespace GithubActionsLab
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
-            Assert.AreEqual(35, Program.Multiply("5", "7")); //testing this one
+            Assert.AreEqual(35, Program.Multiply("5", "7"));
         }
         
         [Test]
@@ -98,6 +98,40 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
+        }
+        
+        
+        
+        
+        
+        
+        
+     //Divide
+        
+        
+        
+        [Test]
+        public void Divide_Valid_JACOBS()
+        {
+            Assert.AreEqual(2.5, Program.Divide("5", "2"));
+            Assert.AreEqual(3, Program.Divide("6", "2"));
+            Assert.AreEqual(25, Program.Divide("100", "4"));
+        }
+        
+        [Test]
+        public void Divide_Invalid_JACOBS()
+        {
+            Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Divide("a", "a"));
+        }
+        
+        [Test]
+        public void Divide_Null_JACOBS()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
         }
 
     }
